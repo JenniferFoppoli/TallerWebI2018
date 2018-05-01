@@ -18,11 +18,11 @@ public class BuscarFarmaciaPorDiaDeTurno  extends SpringTest {
     @Transactional @Rollback(true)
     public void buscarFarmacia(){
     	Farmacia farmacia1 = new Farmacia();
-		farmacia1.setNombre("farmacia1");
-		farmacia1.setTelefono("1111");
-		farmacia1.setDiaDeTurno("martes");
-		getSession().save(farmacia1);
-		
+    	farmacia1.setNombre("farmacia1");
+    	farmacia1.setTelefono("2222");
+    	farmacia1.setDiaDeTurno("martes");
+    	getSession().save(farmacia1);
+    	
 		Farmacia farmacia2 = new Farmacia();
 		farmacia2.setDiaDeTurno("lunes");
 		farmacia2.setNombre("farmacia2");
@@ -30,15 +30,15 @@ public class BuscarFarmaciaPorDiaDeTurno  extends SpringTest {
 		getSession().save(farmacia2);
 		
 		Farmacia farmacia3 = new Farmacia();
-		farmacia1.setDiaDeTurno("martes");
-		farmacia1.setNombre("farmacia3");
-		farmacia1.setTelefono("1111");
+		farmacia3.setDiaDeTurno("martes");
+		farmacia3.setNombre("farmacia3");
+		farmacia3.setTelefono("1111");
 		getSession().save(farmacia3);
 		
 		Farmacia farmacia4 = new Farmacia();
-		farmacia1.setDiaDeTurno("miercoles");
-		farmacia1.setNombre("farmacia4");
-		farmacia1.setTelefono("1111");
+		farmacia4.setDiaDeTurno("miercoles");
+		farmacia4.setNombre("farmacia4");
+		farmacia4.setTelefono("1111");
 		getSession().save(farmacia4);
 		
 		List<Farmacia> Resultado = getSession().createCriteria(Farmacia.class).add(Restrictions.eq("diaDeTurno", "martes")).list();
@@ -46,7 +46,7 @@ public class BuscarFarmaciaPorDiaDeTurno  extends SpringTest {
     		assertThat(busqueda.getDiaDeTurno()).isEqualTo("martes");
     		
     	}
-    	assertThat(Resultado.size()).isEqualTo(0);
+    	assertThat(Resultado.size()).isEqualTo(2);
 	}
     
 
