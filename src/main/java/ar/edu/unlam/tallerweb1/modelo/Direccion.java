@@ -15,6 +15,7 @@ public class Direccion {
 	private String numero;
 	@ManyToOne
 	private Barrio barrio;
+	
 	public Long getId() {
 		return id;
 	}

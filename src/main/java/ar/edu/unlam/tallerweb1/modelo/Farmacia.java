@@ -18,6 +18,7 @@ public class Farmacia {
 	private Punto punto;
 	@ManyToOne
 	private Direccion direccion;
+	
 	public Long getId() {
 		return id;
 	}
