@@ -1,4 +1,4 @@
 /target/
 /.classpath
 /bin/
-/src/main/resources/hibernateContext.xml
+/src/main/resources/hibernateContext.xm
