@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-La suma de ${numero1} y ${numero2} es ${numero1+numero2}
+La ${operacion} de ${numero1} y ${numero2} es ${resultado}
 </body>
 </html>
